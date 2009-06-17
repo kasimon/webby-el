@@ -1,5 +1,37 @@
-;; Webby.el
-;; Copyright (c) 2009 Karsten Heymann <karsten.heymann@gmx.de>
+;; webby.el --- Emacs support for the webby website compiler
+
+;; Copyright  (C)  2009  Karsten Heymann <devel@karsten-heymann.de>
+
+;; Version: 0.1
+;; Keywords: webby html www
+;; Author: Karsten Heymann <devel@karsten-heymann.de>
+;; Maintainer: Karsten Heymann <devel@karsten-heymann.de>
+;; URL: http://github.com/kasimon/webby-el
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 2 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program; if not, write to the Free Software
+;; Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+;; Commentary: 
+
+;; This file implements basic emacs support for webby, a website compiler written 
+;; in ruby.  Webby can be found at http://webby.rubyforge.org/.
+;; 
+;; This is a very early release with few features. The interface is
+;; still subject to change, although changes will be done only for a
+;; good reason. Documentation is still very sparse.
+
+;; Code:
 
 (define-derived-mode webby-mode text-mode "Webby"
   "Major mode for webby documents."
