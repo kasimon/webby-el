@@ -1,7 +1,7 @@
 #+TITLE: webby.el TODO list
 
 * DONE [#A] Run webby from page source file
-* TODO [#A] Proper license in webby.el
+* DONE [#A] Proper license in webby.el
 * TODO [#A] Better webby output log presentation (ANSI color handling)
 * TODO [#B] Syntax highlighting
 * TODO [#B] Better documentation
