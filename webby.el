@@ -1,11 +1,11 @@
-;; webby.el
+;; Webby.el
 ;; Copyright (c) 2009 Karsten Heymann <karsten.heymann@gmx.de>
 
 (define-derived-mode webby-mode text-mode "Webby"
   "Major mode for webby documents."
-  (setq case-fold-search nil))
+)
 
-(define-key webby-mode-map "\C-c\C-c" 'webby-comnmand)
+(define-key webby-mode-map "\C-c\C-c" 'webby-command)
 (define-key webby-mode-map "\C-c\C-b" 'webby-build)
 (define-key webby-mode-map "\C-c\C-p" 'webby-publish)
 (define-key webby-mode-map "\C-c\C-r" 'webby-rebuild)
@@ -40,6 +40,16 @@
   (kh-shell-command-in-dir (kh-webby-find-project-root) (concat "webby " command))
   (message "Finished")
 )
+
+(defun webby-command ()
+  "Query webby command to run and run it."
+  (interactive)
+  (kh-webby-execute (completing-read
+		     "Webby command: "
+		     '("build" "rebuild" "publish")
+		     )
+		    )
+  )
 
 (defun webby-build ()
   "Rebuild all files in a webby project that need an update."
