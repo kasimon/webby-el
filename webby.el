@@ -39,7 +39,7 @@
 
 (define-key webby-mode-map "\C-c\C-c" 'webby-command)
 (define-key webby-mode-map "\C-c\C-b" 'webby-build)
-(define-key webby-mode-map "\C-c\C-p" 'webby-publish)
+(define-key webby-mode-map "\C-c\C-d" 'webby-deploy)
 (define-key webby-mode-map "\C-c\C-r" 'webby-rebuild)
 
 (defun kh-get-parent-dir (dir)
@@ -78,7 +78,7 @@
   (interactive)
   (kh-webby-execute (completing-read
 		     "Webby command: "
-		     '("build" "rebuild" "publish")
+		     '("build" "rebuild" "deploy")
 		     )
 		    )
   )
@@ -93,7 +93,7 @@
   (interactive)
   (kh-webby-execute "rebuild"))
 
-(defun webby-publish ()
+(defun webby-deploy ()
   "Publish the current webby project."
   (interactive)
   (kh-webby-execute "publish"))
