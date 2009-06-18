@@ -69,7 +69,9 @@
   "Execute a webby command on the project of the current buffer."
   ;; execute webby in that dir
   (message (concat "Running: webby " command))
-  (kh-shell-command-in-dir (kh-webby-find-project-root) (concat "webby " command))
+  (kh-shell-command-in-dir 
+   (kh-webby-find-project-root) 
+   (concat "unset TERM; webby " command))
   (message "Finished")
 )
 
