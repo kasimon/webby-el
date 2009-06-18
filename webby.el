@@ -94,8 +94,8 @@
   (kh-webby-execute "rebuild"))
 
 (defun webby-deploy ()
-  "Publish the current webby project."
+  "Deploy the current webby project."
   (interactive)
-  (kh-webby-execute "publish"))
+  (kh-webby-execute "deploy"))
 
 (provide 'webby)
