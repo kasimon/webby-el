@@ -2,9 +2,10 @@
 
 * DONE [#A] Run webby from page source file
 * DONE [#A] Proper license in webby.el
-* TODO [#A] Better webby output log presentation (ANSI color handling)
+* DONE [#A] Remove ANSI color setting characters from webby output
 * TODO [#B] Syntax highlighting
 * TODO [#B] Better documentation
 * TODO [#C] Read available commands from webby -T
 * TODO [#C] Create new pages from within emacs and visit them directly
 * TODO [#C] Jump directly to layout of source file
+* TODO [#C] Better webby output presentation
